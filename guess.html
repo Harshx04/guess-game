@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <body>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: pink;
+
+            }
+            .container{
+                border: 20px solid white;
+                border-radius: 20px 100px;
+            }
+            .box{
+                border: 20px solid lightcoral;
+                border-radius: 20px 100px;
+            }
+            #yo{
+                border: 2px solid black;
+                 border-radius:30px  ;
+            }
+            button{
+                background-color: aqua;
+                
+            }
+            button:hover{
+                background-color: chocolate;
+            }
+        </style>
+        <script>
+            let guess=Math.floor(Math.random()*10);
+            function gues(){
+                let input=parseInt(document.getElementById('yo').value);
+                if(guess==input){
+                   document.getElementById('1').innerHTML=("won hurray");
+                }
+                else if(guess<input){
+                    alert('eneter lower');
+                }
+                else{
+                    alert("hiher baby");
+                }
+
+            }
+        </script>
+        <div class="container">
+            <div class="box">
+            <h2>Guess me if u can</h2>
+            <input id="yo" placeholder="enter number"><button id="1" onclick="gues()">submit</button>
+         </div>
+        </div>
+    </body>
+</html>
